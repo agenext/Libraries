@@ -55,7 +55,7 @@ local redzlib = {
 	Save = {
 		UISize = {550, 380},
 		TabSize = 160,
-		Theme = "Darker"
+		Theme = "Purple"
 	},
 	Settings = {},
 	Connection = {},
@@ -1618,7 +1618,7 @@ function redzlib:MakeWindow(Configs)
 	end
 	function Window:AddMinimizeButton(Configs)
 		local Button = MakeDrag(Create("ImageButton", ScreenGui, {
-			Size = Configs.Size or UDim2.fromOffset(45, 45),
+			Size = UDim2.fromOffset(45, 45),
 			Position = UDim2.fromScale(0.15, 0.15),
 			BackgroundTransparency = 1,
 			BackgroundColor3 = Theme["Color Hub 2"],
