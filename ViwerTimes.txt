@@ -1,0 +1,87 @@
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+-- UI Setup
+local ScreenGui = Instance.new("ScreenGui", game:GetService("CoreGui"))
+local Frame = Instance.new("Frame")
+Frame.Size = UDim2.new(0, 200, 0, 300)
+Frame.Position = UDim2.new(0, 100, 0, 100)
+Frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Frame.BorderSizePixel = 0
+Frame.Active = true
+Frame.Draggable = true
+Frame.Parent = ScreenGui
+
+local UIListLayout = Instance.new("UIListLayout", Frame)
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 2)
+
+-- Cria TextLabel
+local function CreateLabel(text)
+	local label = Instance.new("TextLabel")
+	label.Size = UDim2.new(1, 0, 0, 20)
+	label.BackgroundTransparency = 1
+	label.TextColor3 = Color3.fromRGB(255, 255, 255)
+	label.Font = Enum.Font.SourceSans
+	label.TextScaled = true
+	label.Text = text
+	label.Parent = Frame
+	return label
+end
+
+-- Função pra pegar todos os plots
+local function GetAllPlots()
+	local plotsFolder = workspace:FindFirstChild("Plots")
+	if not plotsFolder then return {} end
+
+	local result = {}
+
+	for _, plot in pairs(plotsFolder:GetChildren()) do
+		local owner = "???"
+		local time = "Indefinido"
+
+		local plotSign = plot:FindFirstChild("PlotSign")
+		if plotSign and plotSign:FindFirstChild("SurfaceGui") and plotSign.SurfaceGui:FindFirstChild("Frame") then
+			local label = plotSign.SurfaceGui.Frame:FindFirstChild("TextLabel")
+			if label then owner = label.Text end
+		end
+
+		local purchases = plot:FindFirstChild("Purchases")
+		if purchases and purchases:FindFirstChild("PlotBlock") then
+			local gui = purchases.PlotBlock:FindFirstChild("Main") and purchases.PlotBlock.Main:FindFirstChild("BillboardGui")
+			if gui and gui:FindFirstChild("RemainingTime") then
+				time = gui.RemainingTime.Text
+			end
+		end
+
+		table.insert(result, {Owner = owner, Time = time})
+	end
+
+	return result
+end
+
+-- Atualiza UI
+task.spawn(function()
+	while task.wait(1) do
+		-- limpar UI antiga
+		for _, child in pairs(Frame:GetChildren()) do
+			if child:IsA("TextLabel") then
+				child:Destroy()
+			end
+		end
+
+		local allPlots = GetAllPlots()
+		for _, data in ipairs(allPlots) do
+			if data.Owner:find(LocalPlayer.DisplayName) then
+				CreateLabel("Seu: " .. data.Time)
+				break
+			end
+		end
+
+		for _, data in ipairs(allPlots) do
+			if not data.Owner:find(LocalPlayer.DisplayName) then
+				CreateLabel(data.Owner .. ": " .. data.Time)
+			end
+		end
+	end
+end)
