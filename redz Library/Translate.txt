@@ -1,4 +1,4 @@
-local Translations = {
+Translations = {
 	["994732206"] = {
 		["Someone Hub | Blox Fruits"] = {["BR"] = "Hub de Alguém | Blox Fruits", ["TH"] = "ฮับของใครบางคน | Blox Fruits", ["VN"] = "Hub Ai Đó | Blox Fruits"},
 		["By Someone"] = {["BR"] = "Feito Por Alguém", ["TH"] = "สร้างโดยใครบางคน", ["VN"] = "Được Làm Bởi Ai Đó"},
@@ -16,4 +16,5 @@ local Translations = {
 		["Settings"] = {["BR"] = "Configurações", ["TH"] = "การตั้งค่า", ["VN"] = "Cài Đặt"},
 		["Skill"] = {["BR"] = "Habilidade", ["TH"] = "สกิล", ["VN"] = "Kỹ Năng"},
 	},
+
 }
