@@ -53,7 +53,7 @@ local Translations = {
 	["Patch"] = {["BR"] = "Concertar", ["US"] = "Patch"},
 }
 
-local LocalizationService = g:GetService("LocalizationService")
+local LocalizationService = game:GetService("LocalizationService")
 
 function GetLocalLanguage()
     return LocalizationService:GetCountryRegionForPlayerAsync(Player) or "US"
