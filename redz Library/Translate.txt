@@ -1,0 +1,53 @@
+Translations = {
+	["994732206"] = {
+		["Someone Hub | Blox Fruits"] = {["BR"] = "Hub de Alguém | Blox Fruits", ["TH"] = "ฮับของใครบางคน | Blox Fruits", ["VN"] = "Hub Ai Đó | Blox Fruits"},
+		["By Someone"] = {["BR"] = "Feito Por Alguém", ["TH"] = "สร้างโดยใครบางคน", ["VN"] = "Được Làm Bởi Ai Đó"},
+		["Social Media"] = {["BR"] = "Redes Sociais", ["TH"] = "โซเชียลมีเดีย", ["VN"] = "Mạng Xã Hội"},
+		["Farm"] = {["BR"] = "Farm", ["TH"] = "ฟาร์ม", ["VN"] = "Thu Hoạch"},
+		["Quests/Items"] = {["BR"] = "Missões/Itens", ["TH"] = "เควส/ไอเทม", ["VN"] = "Nhiệm Vụ/Vật Phẩm"},
+		["Sea Events"] = {["BR"] = "Eventos Marítimos", ["TH"] = "กิจกรรมทางทะเล", ["VN"] = "Sự Kiện Biển"},
+		["Islands"] = {["BR"] = "Ilhas", ["TH"] = "เกาะ", ["VN"] = "Đảo"},
+		["Fruits/Raids"] = {["BR"] = "Frutas/Raids", ["TH"] = "ผลไม้/เรด", ["VN"] = "Trái Cây/Raids"},
+		["Teleport"] = {["BR"] = "Teleporte", ["TH"] = "เทเลพอร์ต", ["VN"] = "Dịch Chuyển"},
+		["Player"] = {["BR"] = "Jogador", ["TH"] = "ผู้เล่น", ["VN"] = "Người Chơi"},
+		["Race"] = {["BR"] = "Raça", ["TH"] = "เผ่า", ["VN"] = "Chủng Tộc"},
+		["Shop"] = {["BR"] = "Loja", ["TH"] = "ร้านค้า", ["VN"] = "Cửa Hàng"},
+		["Visual"] = {["BR"] = "Visual", ["TH"] = "วิชวล", ["VN"] = "Hình Ảnh"},
+		["Settings"] = {["BR"] = "Configurações", ["TH"] = "การตั้งค่า", ["VN"] = "Cài Đặt"},
+		["Skill"] = {["BR"] = "Habilidade", ["TH"] = "สกิล", ["VN"] = "Kỹ Năng"},
+		-- Social --
+	
+		-- Settings --
+		
+		-- Farm --
+		
+		-- Quests --
+		
+		-- SeaEvents --
+		
+		-- Islands --
+		
+		-- Fruits --
+		
+		-- Teleport --
+		
+		-- Player --
+		
+		-- Race --
+		
+		-- Shop --
+		
+		-- Visual --
+		["Extra Sensory Perception"] = {["BR"] = "Percepção Extra Sensorial", ["TH"] = "การรับรู้เหนือประสาทสัมผัส", ["VN"] = "Nhận Thức Ngoại Giác Quan"},
+		["ESP Players"] = {["BR"] = "ESP Jogadores", ["TH"] = "ผู้เล่น ESP", ["VN"] = "ESP Người Chơi"},
+		["See Name, Distance, Health And Energy"] = {["BR"] = "Veja Nome, Distância, Vida e Energia", ["TH"] = "ดูชื่อ, ระยะทาง, พลังชีวิต และพลังงาน", ["VN"] = "Xem Tên, Khoảng Cách, Máu và Năng Lượng"},
+		["ESP Fruits"] = {["BR"] = "ESP Frutas", ["TH"] = "ผลไม้ ESP", ["VN"] = "ESP Trái Cây"},
+		["See Name And Distance"] = {["BR"] = "Veja Nome e Distância", ["TH"] = "ดูชื่อและระยะทาง", ["VN"] = "Xem Tên và Khoảng Cách"},
+		["ESP Berries"] = {["BR"] = "ESP Berries", ["TH"] = "เบอร์รี่ ESP", ["VN"] = "ESP Berries"},
+		["ESP Chests"] = {["BR"] = "ESP Baús", ["TH"] = "หีบ ESP", ["VN"] = "ESP Rương"},
+		["ESP Islands"] = {["BR"] = "ESP Ilhas", ["TH"] = "เกาะ ESP", ["VN"] = "ESP Đảo"},
+		["ESP Flowers"] = {["BR"] = "ESP Flores", ["TH"] = "ดอกไม้ ESP", ["VN"] = "ESP Hoa"},
+		-- Skill --
+		
+	},
+}
