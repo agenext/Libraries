@@ -40,7 +40,7 @@ Translations = {
 		["Bartilo Quest"] = {["BR"] = "Missão do Bartilo", ["TH"] = "เควสบาร์ติโล", ["VN"] = "Nhiệm Vụ Bartilo"},
 		["Citizen Quest"] = {["BR"] = "Missão Do Cidadão", ["TH"] = "เควสพลเมือง", ["VN"] = "Nhiệm Vụ Công Dân"},
 		["Barista Cousin"] = {["BR"] = "Primo Do Barista", ["TH"] = "บาริสต้าคูซิน", ["VN"] = "Anh Họ Barista"},
-		["Berries"] = {["BR"] = "Bagas", ["TH"] = "เบอร์รี่", ["VN"] = "Quả Dâu"},"Leviathan"] = {["BR"] = "Leviatã", ["TH"] = "เลวีอาธาน", ["VN"] = "Leviathan"},
+		["Berries"] = {["BR"] = "Bagas", ["TH"] = "เบอร์รี่", ["VN"] = "Quả Dâu"},
 		-- SeaEvents --
 		
 		-- Islands --
@@ -86,4 +86,5 @@ Translations = {
 		-- Skill --
 		
 	},
+
 }
