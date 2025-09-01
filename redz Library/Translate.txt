@@ -1,0 +1,89 @@
+Translations = {
+	["994732206"] = {
+		["Someone Hub | Blox Fruits"] = {["BR"] = "Hub de Alguém | Blox Fruits", ["TH"] = "ฮับของใครบางคน | Blox Fruits", ["VN"] = "Hub Ai Đó | Blox Fruits"},
+		["By Someone"] = {["BR"] = "Feito Por Alguém", ["TH"] = "สร้างโดยใครบางคน", ["VN"] = "Được Làm Bởi Ai Đó"},
+		["Social Media"] = {["BR"] = "Redes Sociais", ["TH"] = "โซเชียลมีเดีย", ["VN"] = "Mạng Xã Hội"},
+		["Farm"] = {["BR"] = "Farmar", ["TH"] = "ฟาร์ม", ["VN"] = "Thu Hoạch"},
+		["Quests/Items"] = {["BR"] = "Missões/Itens", ["TH"] = "เควส/ไอเทม", ["VN"] = "Nhiệm Vụ/Vật Phẩm"},
+		["Sea Events"] = {["BR"] = "Eventos Marítimos", ["TH"] = "กิจกรรมทางทะเล", ["VN"] = "Sự Kiện Biển"},
+		["Islands"] = {["BR"] = "Ilhas", ["TH"] = "เกาะ", ["VN"] = "Đảo"},
+		["Fruits/Raids"] = {["BR"] = "Frutas/Raids", ["TH"] = "ผลไม้/เรด", ["VN"] = "Trái Cây/Raids"},
+		["Teleport"] = {["BR"] = "Teleporte", ["TH"] = "เทเลพอร์ต", ["VN"] = "Dịch Chuyển"},
+		["Player"] = {["BR"] = "Jogador", ["TH"] = "ผู้เล่น", ["VN"] = "Người Chơi"},
+		["Race"] = {["BR"] = "Raça", ["TH"] = "เผ่า", ["VN"] = "Chủng Tộc"},
+		["Shop"] = {["BR"] = "Loja", ["TH"] = "ร้านค้า", ["VN"] = "Cửa Hàng"},
+		["Visual"] = {["BR"] = "Visual", ["TH"] = "วิชวล", ["VN"] = "Hình Ảnh"},
+		["Settings"] = {["BR"] = "Configurações", ["TH"] = "การตั้งค่า", ["VN"] = "Cài Đặt"},
+		["Skill"] = {["BR"] = "Habilidade", ["TH"] = "สกิล", ["VN"] = "Kỹ Năng"},
+		-- Social --
+	
+		-- Settings --
+		["Main Settings"] = {["BR"] = "Configurações Principais", ["TH"] = "การตั้งค่าหลัก", ["VN"] = "Cài Đặt Chính"},
+		["More Settings"] = {["BR"] = "Configurações Extras", ["TH"] = "การตั้งค่าเพิ่มเติม", ["VN"] = "Cài Đặt Nâng Cao"},
+		["Codes"] = {["BR"] = "Códigos", ["TH"] = "รหัส", ["VN"] = "Mã"},
+		["Menus"] = {["BR"] = "Lojas & Menus", ["TH"] = "ร้านค้า & เมนู", ["VN"] = "Cửa Hàng & Menu"},
+		["Equipe"] = {["BR"] = "Equipe", ["TH"] = "ทีม", ["VN"] = "Đội"},
+		["More FPS"] = {["BR"] = "Mais FPS", ["TH"] = "เฟรมเรตเพิ่ม", ["VN"] = "FPS Cao Hơn"},
+		["Safe Settings"] = {["BR"] = "Miscelânea", ["TH"] = "การตั้งค่าหลากหลาย", ["VN"] = "Đa Dạng"},
+		-- Farm --
+		["Chest"] = {["BR"] = "Baú", ["TH"] = "หีบ", ["VN"] = "Rương"},
+		["Ectoplasm"] = {["BR"] = "Ectoplasma", ["TH"] = "อีคโทพลาสซึม", ["VN"] = "Ectoplasm"},
+		["Bones"] = {["BR"] = "Ossos", ["TH"] = "กระดูก", ["VN"] = "Xương"},
+		["Eagle Boss"] = {["BR"] = "Chefe Águia", ["TH"] = "บอสอีเกิ้ล", ["VN"] = "Trùm Đại Bàng"},
+		["Elite Hunters"] = {["BR"] = "Caçadores de Elite", ["TH"] = "นักล่าชั้นยอด", ["VN"] = "Thợ Săn Cao Cấp"},
+		["Bosses"] = {["BR"] = "Chefes", ["TH"] = "บอส", ["VN"] = "Trùm"},
+		["Mastery"] = {["BR"] = "Mestria", ["TH"] = "ความชำนาญ", ["VN"] = "Tinh Thông"},
+		-- Quests --
+		["Second Sea"] = {["BR"] = "Segundo Mar", ["TH"] = "ทะเลที่สอง", ["VN"] = "Biển Thứ Hai"},
+		["Third Sea"] = {["BR"] = "Terceiro Mar", ["TH"] = "ทะเลที่สาม", ["VN"] = "Biển Thứ Ba"},
+		["Don Swan"] = {["BR"] = "Don Swan", ["TH"] = "ดอน สวอน", ["VN"] = "Don Swan"},
+		["Bartilo Quest"] = {["BR"] = "Missão do Bartilo", ["TH"] = "เควสบาร์ติโล", ["VN"] = "Nhiệm Vụ Bartilo"},
+		["Citizen Quest"] = {["BR"] = "Missão Do Cidadão", ["TH"] = "เควสพลเมือง", ["VN"] = "Nhiệm Vụ Công Dân"},
+		["Barista Cousin"] = {["BR"] = "Primo Do Barista", ["TH"] = "บาริสต้าคูซิน", ["VN"] = "Anh Họ Barista"},
+		["Berries"] = {["BR"] = "Bagas", ["TH"] = "เบอร์รี่", ["VN"] = "Quả Dâu"},"Leviathan"] = {["BR"] = "Leviatã", ["TH"] = "เลวีอาธาน", ["VN"] = "Leviathan"},
+		-- SeaEvents --
+		
+		-- Islands --
+		["Status"] = {["BR"] = "Status", ["TH"] = "สถานะ", ["VN"] = "Trạng Thái"},
+		["Kitsune Island"] = {["BR"] = "Ilha Kitsune", ["TH"] = "เกาะคิซึเนะ", ["VN"] = "Đảo Kitsune"},
+		["Mirage Island"] = {["BR"] = "Ilha Mirage", ["TH"] = "เกาะมิราจ", ["VN"] = "Đảo Mirage"},
+		["Prehistoric Island"] = {["BR"] = "Ilha Pré-Histórica", ["TH"] = "เกาะยุคก่อนประวัติศาสตร์", ["VN"] = "Đảo Tiền Sử"},
+		["Leviathan"] = {["BR"] = "Leviatã", ["TH"] = "เลวีอาธาน", ["VN"] = "Leviathan"},
+		-- Fruits --
+		["Fruits"] = {["BR"] = "Frutas", ["TH"] = "ผลไม้", ["VN"] = "Trái Cây"},
+		["Raid"] = {["BR"] = "Raid", ["TH"] = "เรด", ["VN"] = "Raid"},
+		-- Teleport --
+		["Seas"] = {["BR"] = "Mares", ["TH"] = "ทะเล", ["VN"] = "Biển"},
+		-- Player --
+		["Local Player"] = {["BR"] = "Jogador Local", ["TH"] = "ผู้เล่นท้องถิ่น", ["VN"] = "Người Chơi Cục Bộ"},
+		["Aimbot"] = {["BR"] = "Aimbot", ["TH"] = "เเอมบอท", ["VN"] = "Aimbot"},
+		-- Race --
+		["To Evolve"] = {["BR"] = "Evoluir", ["TH"] = "วิวัฒนาการ", ["VN"] = "Tiến Hóa"},
+		["Unlock Races"] = {["BR"] = "Desbloquear Raças", ["TH"] = "ปลดล็อคเผ่า", ["VN"] = "Mở Khóa Chủng Tộc"},
+		-- Shop --
+		["Christmas"] = {["BR"] = "Natal", ["TH"] = "คริสต์มาส", ["VN"] = "Giáng Sinh"},
+		["Valentine's Day"] = {["BR"] = "Dia Dos Namorados", ["TH"] = "วันวาเลนไทน์", ["VN"] = "Ngày Lễ Tình Nhân"},
+		["Misc"] = {["BR"] = "Miscelânea", ["TH"] = "เบ็ดเตล็ด", ["VN"] = "Đa Dạng"},
+		["Fighting Styles"] = {["BR"] = "Estilos De Luta", ["TH"] = "สไตล์การต่อสู้", ["VN"] = "Phong Cách Chiến Đấu"},
+		["Swords"] = {["BR"] = "Espadas", ["TH"] = "ดาบ", ["VN"] = "Kiếm"},
+		["Guns"] = {["BR"] = "Armas De Fogo", ["TH"] = "ปืน", ["VN"] = "Súng"},
+		["Accessories"] = {["BR"] = "Acessórios", ["TH"] = "เครื่องประดับ", ["VN"] = "Phụ Kiện"},
+		["Races"] = {["BR"] = "Raças", ["TH"] = "เผ่า", ["VN"] = "Chủng Tộc"},
+		["Volcano Event"] = {["BR"] = "Evento Vulcão", ["TH"] = "กิจกรรมภูเขาไฟ", ["VN"] = "Sự Kiện Núi Lửa"},
+		["Shark Hunter"] = {["BR"] = "Caçador De Tubarões", ["TH"] = "นักลาฉลาม", ["VN"] = "Thợ Săn Cá Mập"},
+		["Beast Hunter"] = {["BR"] = "Caçador De Bestas", ["TH"] = "นักล่าสัตว์ประหลาด", ["VN"] = "Thợ Săn Quái Vật"},
+		["Dragon Talon Sage"] = {["BR"] = "Sábio Garra De Dragão", ["TH"] = "นักปราชญ์เล็บมังกร", ["VN"] = "Hiền Giả Long Huyết"},
+		-- Visual --
+		["Extra Sensory Perception"] = {["BR"] = "Percepção Extra Sensorial", ["TH"] = "การรับรู้เหนือประสาทสัมผัส", ["VN"] = "Nhận Thức Ngoại Giác Quan"},
+		["ESP Players"] = {["BR"] = "ESP Jogadores", ["TH"] = "ผู้เล่น ESP", ["VN"] = "ESP Người Chơi"},
+		["See Name, Distance, Health And Energy"] = {["BR"] = "Veja Nome, Distância, Vida e Energia", ["TH"] = "ดูชื่อ, ระยะทาง, พลังชีวิต และพลังงาน", ["VN"] = "Xem Tên, Khoảng Cách, Máu và Năng Lượng"},
+		["ESP Fruits"] = {["BR"] = "ESP Frutas", ["TH"] = "ผลไม้ ESP", ["VN"] = "ESP Trái Cây"},
+		["See Name And Distance"] = {["BR"] = "Veja Nome e Distância", ["TH"] = "ดูชื่อและระยะทาง", ["VN"] = "Xem Tên và Khoảng Cách"},
+		["ESP Berries"] = {["BR"] = "ESP Bagas", ["TH"] = "เบอร์รี่ ESP", ["VN"] = "ESP Berries"},
+		["ESP Chests"] = {["BR"] = "ESP Baús", ["TH"] = "หีบ ESP", ["VN"] = "ESP Rương"},
+		["ESP Islands"] = {["BR"] = "ESP Ilhas", ["TH"] = "เกาะ ESP", ["VN"] = "ESP Đảo"},
+		["ESP Flowers"] = {["BR"] = "ESP Flores", ["TH"] = "ดอกไม้ ESP", ["VN"] = "ESP Hoa"},
+		-- Skill --
+		
+	},
+}
