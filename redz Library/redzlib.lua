@@ -14,15 +14,15 @@ local LocalizationService = game:GetService("LocalizationService")
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/agenext/Libraries/refs/heads/main/redz%20Library/Translate.txt"))()
 wait(0.15)
-function GetLocalLanguage(Player)
+function GetLocalLanguage()
     local success, lang = pcall(function()
         return LocalizationService:GetCountryRegionForPlayerAsync(Player)
     end)
     return (success and lang) or "US"
 end
 
-function Translate(phrase, Player)
-    local lang = GetLocalLanguage(Player)
+function Translate(phrase)
+    local lang = GetLocalLanguage()
     local gameTranslations = Translations[tostring(game.GameId)]
     if gameTranslations and gameTranslations[phrase] and gameTranslations[phrase][lang] then
         return gameTranslations[phrase][lang]
