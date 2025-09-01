@@ -1,22 +1,32 @@
-	LanguageList = {
-		"Português",
-		"English",
-	}
-	LanguageCodes = {
-	    ["Português"] = "pt-BR",
-	    ["English"]   = "en-US",
-	}
-	
-	Translations = {
-	    ["Language"] = {["pt-BR"] = "Idioma", ["en-US"] = "Language"},
-	}
-	
-	function Translate(text)
-	    local lang = LanguageCodes[S["Language"] or "English"]
-	    local words = {}
-	    for word in text:gmatch("%S+") do
-	        table.insert(words, (Translations[word] and Translations[word][lang]) or word)
-	    end
-	    return table.concat(words, " ")
+LanguageList = {
+    "Português",
+    "English",
+}
 
-	end
+LanguageCodes = {
+    "pt-BR",
+    "en-US",
+}
+
+Translations = {
+    ["Language"] = {["pt-BR"] = "Idioma", ["en-US"] = "Language"},
+}
+
+function GetLocalLanguage()
+    local locale = LocalPlayer.LocaleId or "en-US"
+    for _, code in pairs(LanguageCodes) do
+        if code == locale then
+            return code
+        end
+    end
+    return "en-US"
+end
+
+function Translate(text)
+    local lang = GetLocalLanguage()
+    local words = {}
+    for word in text:gmatch("%S+") do
+        table.insert(words, (Translations[word] and Translations[word][lang]) or word)
+    end
+    return table.concat(words, " ")
+end
