@@ -4,7 +4,7 @@ local TweenService = game:GetService("TweenService")
 local HttpService = game:GetService("HttpService")
 local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/agenext/Libraries/refs/heads/main/redz%20Library/Translate.txt"))
+loadstring(game:HttpGet("https://raw.githubusercontent.com/agenext/Libraries/refs/heads/main/redz%20Library/Translate.txt"))()
 local Player = Players.LocalPlayer
 local PlayerMouse = Player:GetMouse()
 
