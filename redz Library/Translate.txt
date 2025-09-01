@@ -12,10 +12,11 @@
 	}
 	
 	function Translate(text)
-	    local lang = LanguageCodes[S["Language"]]
+	    local lang = LanguageCodes[S["Language"] or "English"]
 	    local words = {}
 	    for word in text:gmatch("%S+") do
 	        table.insert(words, (Translations[word] and Translations[word][lang]) or word)
 	    end
 	    return table.concat(words, " ")
+
 	end
