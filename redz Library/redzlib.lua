@@ -12,7 +12,7 @@ local CoreGui = (gethui and gethui()) or game:GetService("CoreGui");
 
 local LocalizationService = game:GetService("LocalizationService")
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/agenext/Libraries/refs/heads/main/redz%20Library/Translate.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/agenext/Libraries/refs/heads/main/redz%20Library/Translate.lua"))()
 
 function GetLocalLanguage()
     local success, lang = pcall(function()
