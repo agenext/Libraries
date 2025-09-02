@@ -1,6 +1,6 @@
 Translations = {
     ["BR"] = {
-	    [""] = {
+	    ["994732206"] = {
 		-- Uniques --
 		["Social Media"] = "Redes Sociais",
 		["Farm"] = "Farmar",
@@ -46,4 +46,5 @@ Translations = {
     ["VN"] = {
 
 	},
+
 }
