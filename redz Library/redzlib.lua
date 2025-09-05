@@ -18,7 +18,7 @@ function GetLocalLanguage()
     local success, lang = pcall(function()
         return LocalizationService:GetCountryRegionForPlayerAsync(Player)
     end)
-    return "VN"-- (success and lang) or "US"
+    return (success and lang) or "US"
 end
 
 function Translate(phrase)
