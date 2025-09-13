@@ -12,7 +12,7 @@ local CoreGui = (gethui and gethui()) or game:GetService("CoreGui");
 
 local LocalizationService = game:GetService("LocalizationService")
 
-loadstring(readfile("Games/Translate/Translate.lua"))()
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/agenext/Translations/refs/heads/main/Translate.lua"))()
 
 function GetLocalLanguage()
     local success, lang = pcall(function()
