@@ -12,7 +12,7 @@ local CoreGui = (gethui and gethui()) or game:GetService("CoreGui");
 
 local LocalizationService = game:GetService("LocalizationService")
 
-loadstring(readfile("Games/Translate/Translate.lua"))()
+loadstring(readfile("Games/Translate/Translate.txt"))() -- loadstring(game:HttpGet("https://raw.githubusercontent.com/agenext/Translations/refs/heads/main/Translate.txt"))()
 
 function GetLocalLanguage()
     local success, lang = pcall(function()
@@ -23,7 +23,7 @@ end
 
 function Translate(phrase)
     local lang = GetLocalLanguage()
-    local gameTranslations = Translations[lang] and Translations[lang][tostring(game.GameId)]
+    local gameTranslations = Translations[lang]
     if gameTranslations and gameTranslations[phrase] then
         return gameTranslations[phrase]
     else
@@ -68,7 +68,19 @@ local redzlib = {
 			["Color Theme"] = Color3.fromRGB(150, 0, 255),
 			["Color Text"] = Color3.fromRGB(240, 240, 240),
 			["Color Dark Text"] = Color3.fromRGB(180, 180, 180)
-		}
+		},
+		Orange = {
+		    ["Color Hub 1"] = ColorSequence.new({
+		        ColorSequenceKeypoint.new(0.00, Color3.fromRGB(27.5, 25, 30)),
+		        ColorSequenceKeypoint.new(0.50, Color3.fromRGB(32.5, 32.5, 32.5)),
+		        ColorSequenceKeypoint.new(1.00, Color3.fromRGB(27.5, 25, 30))
+		    }),
+		    ["Color Hub 2"] = Color3.fromRGB(30, 30, 30),
+		    ["Color Stroke"] = Color3.fromRGB(40, 40, 40),
+		    ["Color Theme"] = Color3.fromRGB(255, 165, 0),
+		    ["Color Text"] = Color3.fromRGB(240, 240, 240),
+		    ["Color Dark Text"] = Color3.fromRGB(180, 180, 180),
+		},
 	},
 	Info = {
 		Version = "1.1.0"
@@ -76,7 +88,7 @@ local redzlib = {
 	Save = {
 		UISize = {550, 380},
 		TabSize = 160,
-		Theme = "Darker"
+		Theme = "Orange"
 	},
 	Settings = {},
 	Connection = {},
@@ -1585,7 +1597,7 @@ function redzlib:MakeWindow(Configs)
 		BackgroundTransparency = 1,
 		Image = "rbxassetid://10747384394",
 		AutoButtonColor = false,
-		Name = "Close"
+		Name = "Close Burro"
 	})
 	
 	local MinimizeButton = SetProps(CloseButton:Clone(), {
@@ -1909,26 +1921,44 @@ function redzlib:MakeWindow(Configs)
 		function Tab:Destroy() TabSelect:Destroy() Container:Destroy() end
 		
 		function Tab:AddSection(Configs)
-			local SectionName = type(Configs) == "string" and Configs or Configs[1] or Configs.Name or Configs.Title or Configs.Section
-			
+			local SectionName = Configs[1] or Configs.Name or Configs.Title or Configs.Section or ""
+			local TIcon = Configs[2] or Configs.Icon or Configs.Image or ""
+			TIcon = redzlib:GetIcon(TIcon)
+			if not TIcon:find("rbxassetid://") or TIcon:gsub("rbxassetid://", ""):len() < 6 then
+				TIcon = false
+			end
 			local SectionFrame = Create("Frame", Container, {
 				Size = UDim2.new(1, 0, 0, 20),
 				BackgroundTransparency = 1,
 				Name = "Option"
 			})
-			
-			local SectionLabel = InsertTheme(Create("TextLabel", SectionFrame, {
-				Font = Enum.Font.GothamBold,
+			local Holder = Create("Frame", SectionFrame, {
+				BackgroundTransparency = 1,
+				Size = UDim2.new(1, 0, 1, 0)
+			})
+			local Layout = Create("UIListLayout", Holder, {
+				FillDirection = "Horizontal",
+				VerticalAlignment = "Center",
+				SortOrder = "LayoutOrder",
+				Padding = UDim.new(0, 5)
+			})
+			local SectionLabel = InsertTheme(Create("TextLabel", Holder, {
+				Font = "GothamBold",
 				Text = Translate(SectionName),
 				TextColor3 = Theme["Color Text"],
-				Size = UDim2.new(1, -25, 1, 0),
-				Position = UDim2.new(0, 5),
+				AutomaticSize = "X",
+				Size = UDim2.new(0, 0, 1, 0),
 				BackgroundTransparency = 1,
 				TextTruncate = "AtEnd",
 				TextSize = 14,
 				TextXAlignment = "Left"
 			}), "Text")
-			
+			local LabelIcon = InsertTheme(Create("ImageLabel", Holder, {
+				Size = UDim2.new(0, 15, 0, 15),
+				Image = TIcon or "",
+				BackgroundTransparency = 1,
+				ImageTransparency = 0
+			}), "Text")
 			local Section = {}
 			table.insert(redzlib.Options, {type = "Section", Name = SectionName, func = Section})
 			function Section:Visible(Bool)
@@ -1945,6 +1975,7 @@ function redzlib:MakeWindow(Configs)
 			end
 			return Section
 		end
+
 		function Tab:AddParagraph(Configs)
 			local PName = Configs[1] or Configs.Title or "Paragraph"
 			local PDesc = Configs[2] or Configs.Text or ""
