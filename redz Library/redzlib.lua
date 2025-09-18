@@ -12,18 +12,20 @@ local CoreGui = (gethui and gethui()) or game:GetService("CoreGui");
 
 local LocalizationService = game:GetService("LocalizationService")
 
-loadstring(readfile("Games/Translate/Translate.txt"))() -- loadstring(game:HttpGet("https://raw.githubusercontent.com/agenext/Translations/refs/heads/main/Translate.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/agenext/Translations/refs/heads/main/SomeoneHub/Translate.txt"))()
 
 function GetLocalLanguage()
-    local success, lang = pcall(function()
-        return LocalizationService:GetCountryRegionForPlayerAsync(Player)
-    end)
-    return (success and lang) or "US"
+	if _G.MachineTranslation then
+	    local success, lang = pcall(function()
+	        return LocalizationService:GetCountryRegionForPlayerAsync(Player)
+	    end)
+	    return (success and lang) or "US"
+	end
 end
 
 function Translate(phrase)
     local lang = GetLocalLanguage()
-    local gameTranslations = Translations[lang]
+    local gameTranslations = Translations and lang and Translations[lang]
     if gameTranslations and gameTranslations[phrase] then
         return gameTranslations[phrase]
     else
