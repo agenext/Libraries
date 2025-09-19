@@ -25,7 +25,7 @@ end
 
 function Translate(phrase)
     local lang = GetLocalLanguage()
-    local gameTranslations = Translations and lang and Translations[lang]
+    local gameTranslations = Translations and lang and Translations[lang] and Translations[lang][tostring(game.GameId)]
     if gameTranslations and gameTranslations[phrase] then
         return gameTranslations[phrase]
     else
@@ -2761,4 +2761,5 @@ function redzlib:MakeWindow(Configs)
 end
 
 return redzlib
+
 
