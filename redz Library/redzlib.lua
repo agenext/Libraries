@@ -15,7 +15,7 @@ local LocalizationService = game:GetService("LocalizationService")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/agenext/Translations/refs/heads/main/SomeoneHub/Translate.txt"))()
 
 function GetLocalLanguage()
-	if _G.MachineTranslation then
+	if _G.Translate then
 	    local success, lang = pcall(function()
 	        return LocalizationService:GetCountryRegionForPlayerAsync(Player)
 	    end)
@@ -2761,3 +2761,4 @@ function redzlib:MakeWindow(Configs)
 end
 
 return redzlib
+
