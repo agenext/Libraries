@@ -26,11 +26,17 @@ end
 function Translate(phrase)
     local lang = GetLocalLanguage()
     local gameTranslations = Translations and lang and Translations[lang]
-    if gameTranslations and gameTranslations[phrase] then
-        return gameTranslations[phrase]
-    else
+    if not gameTranslations then
         return phrase
     end
+    for key, value in pairs(gameTranslations) do
+        local pattern = key:gsub("%%", "(%%d+)")
+        local match = phrase:match(pattern)
+        if match then
+            return value:gsub("%%", match)
+        end
+    end
+    return gameTranslations[phrase] or phrase
 end
 
 local redzlib = {
@@ -2761,6 +2767,7 @@ function redzlib:MakeWindow(Configs)
 end
 
 return redzlib
+
 
 
 
