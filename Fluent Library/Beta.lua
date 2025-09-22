@@ -4587,7 +4587,7 @@ ElementsTable.Slider = (function()
 	Element.__type = "Slider"
 
 	function Element:New(Idx, Config)
-		Configs.Default = (Configs.Default or Config.Min)
+		Config.Default = (Config.Default ~= nil and Configs.Default or Config.Min)
 		assert(Config.Title, "Slider - Missing Title.")
 		assert(Config.Default, "Slider - Missing default value.")
 		assert(Config.Min, "Slider - Missing minimum value.")
