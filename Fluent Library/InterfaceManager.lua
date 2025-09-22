@@ -63,8 +63,10 @@ local InterfaceManager = {} do
         InterfaceManager:LoadSettings()
 
 		local section = tab:AddSection("Interface Configuration")
-
-		local InterfaceTheme = section:AddDropdown("InterfaceTheme", {
+        table.sort(Library.Themes, function(a, b)
+	        return a:lower() < b:lower()
+	    end)
+ 		local InterfaceTheme = section:AddDropdown("InterfaceTheme", {
 			Title = "Theme",
 			Description = "Changes the interface theme.",
 			Values = Library.Themes,
