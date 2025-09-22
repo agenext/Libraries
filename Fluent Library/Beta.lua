@@ -4904,7 +4904,7 @@ ElementsTable.Slider = (function()
 			Library.Options[Idx] = nil
 		end
 
-		Slider:SetValue(Config.Default)
+		Slider:SetValue(Config.Default or Config.Min)
 
 		Library.Options[Idx] = Slider
 		return Slider
