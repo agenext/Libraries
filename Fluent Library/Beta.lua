@@ -58,12 +58,13 @@ local ProtectGui = protectgui or (syn and syn.protect_gui) or function() end
 
 local Themes = {
 	Names = {
+		"Shadow Pulse",
 		"Dark",
 		"Darker", 
-		"AMOLED",
+		"Amoled",
 		"Light",
 		"Balloon",
-		"SoftCream",
+		"Soft Cream",
 		"Aqua", 
 		"Amethyst",
 		"Rose",
@@ -77,6 +78,43 @@ local Themes = {
 		"Grape",
 		"Bloody",
 		"Arctic"
+	},
+	["Shadow Pulse"] = {
+		Name = "Shadow Pulse",
+		Accent = Color3.fromRGB(90, 190, 255),
+		AcrylicMain = ColorSequence.new(Color3.fromRGB(50, 50, 55), Color3.fromRGB(65, 65, 70)),
+		AcrylicBorder = Color3.fromRGB(80, 80, 85),
+		AcrylicGradient = ColorSequence.new(Color3.fromRGB(45, 45, 50), Color3.fromRGB(60, 60, 65)),
+		AcrylicNoise = 0.88,
+		TitleBarLine = Color3.fromRGB(75, 75, 80),
+		Tab = Color3.fromRGB(115, 115, 120),
+		Element = Color3.fromRGB(105, 105, 110),
+		ElementBorder = Color3.fromRGB(35, 35, 40),
+		InElementBorder = Color3.fromRGB(90, 90, 95),
+		ElementTransparency = 0.87,
+		ToggleSlider = Color3.fromRGB(105, 105, 110),
+		ToggleToggled = Color3.fromRGB(60, 60, 65),
+		SliderRail = Color3.fromRGB(105, 105, 110),
+		DropdownFrame = Color3.fromRGB(150, 150, 155),
+		DropdownHolder = Color3.fromRGB(45, 45, 50),
+		DropdownBorder = Color3.fromRGB(35, 35, 40),
+		DropdownOption = Color3.fromRGB(105, 105, 110),
+		Keybind = Color3.fromRGB(105, 105, 110),
+		Input = Color3.fromRGB(150, 150, 155),
+		InputFocused = Color3.fromRGB(25, 25, 30),
+		InputIndicator = Color3.fromRGB(140, 140, 145),
+		Dialog = Color3.fromRGB(45, 45, 50),
+		DialogHolder = Color3.fromRGB(35, 35, 40),
+		DialogHolderLine = Color3.fromRGB(30, 30, 35),
+		DialogButton = Color3.fromRGB(45, 45, 50),
+		DialogButtonBorder = Color3.fromRGB(80, 80, 85),
+		DialogBorder = Color3.fromRGB(70, 70, 75),
+		DialogInput = Color3.fromRGB(55, 55, 60),
+		DialogInputLine = Color3.fromRGB(150, 150, 155),
+		Text = Color3.fromRGB(240, 240, 245),
+		SubText = Color3.fromRGB(170, 170, 180),
+		Hover = Color3.fromRGB(110, 110, 115),
+		HoverChange = 0.07,
 	},
 	Dark = {
 		Name = "Dark",
@@ -140,8 +178,8 @@ local Themes = {
 		DialogInput = Color3.fromRGB(45, 45, 45),
 		DialogInputLine = Color3.fromRGB(120, 120, 120),
 	},
-	AMOLED = {
-		Name = "AMOLED",
+	Amoled = {
+		Name = "Amoled",
 		Accent = Color3.fromRGB(255, 255, 255),
 		AcrylicMain = Color3.fromRGB(0, 0, 0),
 		AcrylicBorder = Color3.fromRGB(20, 20, 20),
@@ -254,8 +292,8 @@ local Themes = {
 		Hover = Color3.fromRGB(170, 220, 255),
 		HoverChange = 0.03
 	},
-	SoftCream = {
-		Name = "SoftCream",
+	["Soft Cream"] = {
+		Name = "Soft Cream",
 		Accent = Color3.fromRGB(206, 163, 90),
 		AcrylicMain = Color3.fromRGB(255, 245, 220),
 		AcrylicBorder = Color3.fromRGB(255, 230, 200),
@@ -786,7 +824,7 @@ local Themes = {
 }
 
 local Library = {
-	Version = "1.2.2",
+	Version = "2.0",
 
 	OpenFrames = {},
 	Options = {},
@@ -1249,6 +1287,7 @@ local Creator = {
 	TransparencyMotors = {},
 	DefaultProperties = {
 		ScreenGui = {
+			Name = "Fluent UI",
 			ResetOnSpawn = false,
 			ZIndexBehavior = Enum.ZIndexBehavior.Sibling,
 		},
