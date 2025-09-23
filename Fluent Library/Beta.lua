@@ -58,13 +58,13 @@ local ProtectGui = protectgui or (syn and syn.protect_gui) or function() end
 
 local Themes = {
 	Names = {
-		"Shadow Pulse",
+		"ShadowPulse",
 		"Dark",
 		"Darker", 
 		"Amoled",
 		"Light",
 		"Balloon",
-		"Soft Cream",
+		"SoftCream",
 		"Aqua", 
 		"Amethyst",
 		"Rose",
@@ -79,10 +79,10 @@ local Themes = {
 		"Bloody",
 		"Arctic"
 	},
-	["Shadow Pulse"] = {
-		Name = "Shadow Pulse",
+	ShadowPulse = {
+		Name = "ShadowPulse",
 		Accent = Color3.fromRGB(90, 190, 255),
-		AcrylicMain = ColorSequence.new(Color3.fromRGB(50, 50, 55), Color3.fromRGB(65, 65, 70)),
+		AcrylicMain = Color3.fromRGB(50, 50, 55),
 		AcrylicBorder = Color3.fromRGB(80, 80, 85),
 		AcrylicGradient = ColorSequence.new(Color3.fromRGB(45, 45, 50), Color3.fromRGB(60, 60, 65)),
 		AcrylicNoise = 0.88,
@@ -292,8 +292,8 @@ local Themes = {
 		Hover = Color3.fromRGB(170, 220, 255),
 		HoverChange = 0.03
 	},
-	["Soft Cream"] = {
-		Name = "Soft Cream",
+	SoftCream = {
+		Name = "SoftCream",
 		Accent = Color3.fromRGB(206, 163, 90),
 		AcrylicMain = Color3.fromRGB(255, 245, 220),
 		AcrylicBorder = Color3.fromRGB(255, 230, 200),
