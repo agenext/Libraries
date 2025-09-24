@@ -1549,12 +1549,10 @@ function Library:SafeCallback(Function, ...)
 		})
 	end
 end--?
+
 function Library:Round(Number, Factor)
-	if Factor == 0 then
-		return math.floor(Number)
-	end
-	Number = tostring(Number)
-	return Number:find("%.") and tonumber(Number:sub(1, Number:find("%.") + Factor)) or Number
+    Factor = Factor or 1
+    return math.floor(Number / Factor + 0.5) * Factor
 end
 
 local function map(value, inMin, inMax, outMin, outMax)
