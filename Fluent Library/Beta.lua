@@ -4579,6 +4579,10 @@ ElementsTable.Dropdown = (function()
 			end
 
 			Dropdown:BuildDropdownList()
+			task.defer(function()
+			    RecalculateCanvasSize()
+			    RecalculateListSize()
+			end)
 
 			Library:SafeCallback(Dropdown.Callback, Dropdown.Value)
 			Library:SafeCallback(Dropdown.Changed, Dropdown.Value)
