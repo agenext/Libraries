@@ -4549,6 +4549,7 @@ ElementsTable.Dropdown = (function()
 		function Dropdown:SetValues(NewValues)
 			if NewValues then
 				Dropdown.Values = NewValues
+				Dropdown.Value = nil
 			end
 
 			Dropdown:BuildDropdownList()
