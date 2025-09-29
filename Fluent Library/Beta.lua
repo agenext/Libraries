@@ -26,24 +26,34 @@ local httpService = game:GetService("HttpService")
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
 local LocalizationService = game:GetService("LocalizationService")
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/agenext/Translations/refs/heads/main/SomeoneHub/Translate.txt"))()
+
 function GetLocalLanguage()
-	if _G.Translate then
-	    local success, lang = pcall(function()
-	        return LocalizationService:GetCountryRegionForPlayerAsync(LocalPlayer)
-	    end)
-	    return (success and lang) or "US"
-	end
+    if Settings["Translate"] then
+	    if Translations[Settings["Language"]] then
+			return Settings["Language"]
+		end
+        local success, country = pcall(function()
+            return LocalizationService:GetCountryRegionForPlayerAsync(LocalPlayer)
+        end)
+        if success and country and Translations[country] then
+            return country
+        end
+    end
+    return nil
 end
+
+local lang = GetLocalLanguage()
+
 function Translate(phrase)
-    local lang = GetLocalLanguage()
-    local gameTranslations = Translations and lang and Translations[lang]
-    if gameTranslations and gameTranslations[phrase] then
-        return gameTranslations[phrase]
+    if lang and Translations[lang] and Translations[lang][phrase] then
+        return Translations[lang][phrase]
     else
         return phrase
     end
 end
+
 local Mobile = not RunService:IsStudio() and table.find({Enum.Platform.IOS, Enum.Platform.Android}, UserInputService:GetPlatform()) ~= nil
 
 local fischbypass
@@ -59,7 +69,7 @@ local ProtectGui = protectgui or (syn and syn.protect_gui) or function() end
 local Themes = {
 	Names = {
 		"Solar Flare",
-		"Shadow Pulse",
+		"Shadow Purse",
 		"Dark",
 		"Darker", 
 		"Amoled",
