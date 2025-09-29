@@ -30,7 +30,7 @@ local LocalizationService = game:GetService("LocalizationService")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/agenext/Translations/refs/heads/main/SomeoneHub/Translate.txt"))()
 
 function GetLocalLanguage()
-    if Settings["Translate"] then
+    if Settings and Settings["Translate"] then
 	    if Translations[Settings["Language"]] then
 			return Settings["Language"]
 		end
