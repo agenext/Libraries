@@ -47,8 +47,8 @@ end
 local lang = GetLocalLanguage()
 
 function Translate(phrase)
-    if lang and Translations[lang] and Translations[lang][phrase] then
-        return Translations[lang][phrase]
+    if lang and Translations[lang] and Translations[lang][tostring(game.GameId)] and Translations[lang][tostring(game.GameId)][phrase] then
+        return Translations[lang][tostring(game.GameId)][phrase]
     else
         return phrase
     end
