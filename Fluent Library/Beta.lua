@@ -2251,7 +2251,7 @@ Components.Section = (function()
 			}) or nil,
 			New("TextLabel", {
 				RichText = true,
-				Text = Title,
+				Text = Translate(Title),
 				TextTransparency = 0,
 				FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.SemiBold, Enum.FontStyle.Normal),
 				TextSize = 18,
@@ -3517,8 +3517,8 @@ Components.Window = (function()
 		end)
 
 		Window.TitleBar = Components.TitleBar({
-			Title = Config.Title,
-			SubTitle = Config.SubTitle,
+			Title = Translate(Config.Title),
+			SubTitle = Translate(Config.SubTitle),
 			Icon = Config.Icon,
 			Parent = Window.Root,
 			Window = Window,
@@ -5813,7 +5813,7 @@ ElementsTable.Input = (function()
 		Textbox.Frame.AnchorPoint = Vector2.new(1, 0.5)
 		Textbox.Frame.Size = UDim2.fromOffset(160, 30)
 		Textbox.Input.Text = Config.Default or ""
-		Textbox.Input.PlaceholderText = Config.Placeholder or ""
+		Textbox.Input.PlaceholderText = Translate(Config.Placeholder) or ""
 
 		local Box = Textbox.Input
 
