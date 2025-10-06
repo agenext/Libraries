@@ -1420,12 +1420,6 @@ local Creator = {
 			BorderColor3 = Color3.new(0, 0, 0),
 			BorderSizePixel = 0,
 		},
-		Image = {
-			BackgroundTransparency = 1,
-			BackgroundColor3 = Color3.new(1, 1, 1),
-			BorderColor3 = Color3.new(0, 0, 0),
-			BorderSizePixel = 0,
-		},
 		ScrollingFrame = {
 			BackgroundColor3 = Color3.new(1, 1, 1),
 			BorderColor3 = Color3.new(0, 0, 0),
@@ -1612,7 +1606,6 @@ local New = Creator.New
 local GUI = New("ScreenGui", {
 	Parent = LocalPlayer:WaitForChild("PlayerGui"),
 })
-
 Library.GUI = GUI
 ProtectGui(GUI)
 
@@ -3505,11 +3498,10 @@ Components.Window = (function()
 			Window.ContainerHolder
 		})
 
-		Window.Root = New("Image", {
-			BackgroundTransparency = 0,
+		Window.Root = New("Frame", {
+			BackgroundTransparency = 1,
 			Size = Window.Size,
 			Position = Window.Position,
-			Image = Config.Image,
 			Parent = Config.Parent,
 		}, {
 			Window.AcrylicPaint.Frame,
@@ -3822,6 +3814,22 @@ Components.Window = (function()
 					pcall(function()
 						Option:Close()
 					end)
+				end
+			end
+			if not MinimizeNotif then
+				MinimizeNotif = true
+				local Key = Library.MinimizeKeybind and Library.MinimizeKeybind.Value or Library.MinimizeKey.Name
+				if not Mobile then Library:Notify({
+					Title = "Interface",
+					Content = "Press " .. Key .. " to toggle the interface.",
+					Duration = 6
+					})
+				else 
+					Library:Notify({
+						Title = "Interface",
+						Content = "Tap to the button to toggle the interface.",
+						Duration = 6
+					})
 				end
 			end
 
@@ -7191,8 +7199,6 @@ function Library:CreateWindow(Config)
 
 	local Window = Components.Window({
 		Parent = GUI,
-		Name = "Fluent Window",
-		Image = Config.Image or "",
 		Size = Config.Size,
 		Title = Config.Title,
 		Icon = Icon,
